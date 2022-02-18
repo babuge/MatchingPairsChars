@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1645194956 source:d:\develop\github\matchingpairschars\main.cpp
+	<iostream>
+	<vector>
+	<map>
+
