@@ -42,6 +42,12 @@ void eatChar(const map<char, CahrsType> &mp,vector<char> &tmp, char next)
 
 }
 
+void inputTips()
+{
+    cout << " \n输入0退出，";
+    cout << " 请输入需要匹配的字符数（偶数）: ";
+}
+
 int main()
 {
     map<char, CahrsType> typeMap;
@@ -54,19 +60,20 @@ int main()
 
     vector<char> vct;
     int n;
-    cout << " 请输入需要匹配的字符数（偶数）: ";
+    inputTips();
     while(cin >> n)
     {
         if(n == 0)
         {
             cout <<endl;
-            cout << "请输入需要匹配的字符数（偶数）:";
+            cout << "输入0，已退出！" << endl;
             break;
         }
         vct.clear();
         if(n%2 != 0)
         {
             cout << "匹配结果：false" << endl;
+            inputTips();
             continue;
         }
         vct.reserve(n);
@@ -106,7 +113,7 @@ int main()
             cout << "结果：true" << endl;
         }
 
-        cout << "请输入需要匹配的字符数（偶数）:";
+        inputTips();
     }
 
     return 0;
